@@ -12,6 +12,7 @@ Debian:
   default: /etc/default/stunnel4
   pid_dir: /var/run/stunnel4
   use_chroot: true
+  certificates_auto_config: true
 
 FreeBSD:
   package: stunnel
@@ -25,3 +26,4 @@ FreeBSD:
   default: None
   pid_dir: /var/run
   use_chroot: false
+  certificates_auto_config: true
