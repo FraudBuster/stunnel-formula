@@ -2,6 +2,55 @@
 Changelog
 =========
 
+`0.3.0 <https://github.com/saltstack-formulas/stunnel-formula/compare/v0.2.3...v0.3.0>`_ (2023-01-25)
+---------------------------------------------------------------------------------------------------------
+
+Bug Fixes
+^^^^^^^^^
+
+
+* **xenial:** avoid ``verify*`` (not available in ``stunnel`` version 5.30) (\ `bc5d2b6 <https://github.com/saltstack-formulas/stunnel-formula/commit/bc5d2b648a9364827ff6467aac748e77ad1e83b2>`_\ ), closes `/github.com/mtrojnar/stunnel/blob/master/NEWS.md#version-534-20160705 <https://github.com//github.com/mtrojnar/stunnel/blob/master/NEWS.md/issues/version-534-20160705>`_
+
+Continuous Integration
+^^^^^^^^^^^^^^^^^^^^^^
+
+
+* update ``pre-commit`` configuration inc. for pre-commit.ci [skip ci] (\ `c5c2003 <https://github.com/saltstack-formulas/stunnel-formula/commit/c5c2003dbc684799ce758855044b891caf17200b>`_\ )
+* **kitchen+gitlab:** update for new pre-salted images [skip ci] (\ `89a5fd0 <https://github.com/saltstack-formulas/stunnel-formula/commit/89a5fd096b394cefee2644fd269848d48d7b8e1a>`_\ )
+* update linters to latest versions [skip ci] (\ `68a7aff <https://github.com/saltstack-formulas/stunnel-formula/commit/68a7affb01c6ecc09b36df26bf83219b0d13c4bb>`_\ )
+* **3003.1:** update inc. AlmaLinux, Rocky & ``rst-lint`` [skip ci] (\ `f5e0d07 <https://github.com/saltstack-formulas/stunnel-formula/commit/f5e0d07fe3fe42f16d45d393e03701fbc175393e>`_\ )
+* **commitlint:** ensure ``upstream/master`` uses main repo URL [skip ci] (\ `e008d50 <https://github.com/saltstack-formulas/stunnel-formula/commit/e008d5002474b535b3e66a664e0cf8f8b851ed77>`_\ )
+* **gemfile:** allow rubygems proxy to be provided as an env var [skip ci] (\ `ea0ee50 <https://github.com/saltstack-formulas/stunnel-formula/commit/ea0ee500a1dac1273ecef13b4dc97e162f25a893>`_\ )
+* **gemfile+lock:** use ``ssf`` customised ``inspec`` repo [skip ci] (\ `33cabad <https://github.com/saltstack-formulas/stunnel-formula/commit/33cabad631ad9cf6504d435272c90fcf47d33452>`_\ )
+* **gemfile+lock:** use ``ssf`` customised ``kitchen-docker`` repo [skip ci] (\ `8feade3 <https://github.com/saltstack-formulas/stunnel-formula/commit/8feade3afe8864f5603f2e9ed12ca322a890b4ae>`_\ )
+* **gitlab-ci:** add ``rubocop`` linter (with ``allow_failure``\ ) [skip ci] (\ `b17eb68 <https://github.com/saltstack-formulas/stunnel-formula/commit/b17eb6899e5552a9a5567deb14dde9b95da1e04a>`_\ )
+* **kitchen:** move ``provisioner`` block & update ``run_command`` [skip ci] (\ `6bfa82c <https://github.com/saltstack-formulas/stunnel-formula/commit/6bfa82c7c838f0f6b40f08e75c2cc5a7755b9867>`_\ )
+* **kitchen+ci:** update with ``3004`` pre-salted images/boxes [skip ci] (\ `875cf7d <https://github.com/saltstack-formulas/stunnel-formula/commit/875cf7de8bee3cee27b9ab829ae9aedbd512a1d2>`_\ )
+* **kitchen+ci:** update with latest ``3003.2`` pre-salted images [skip ci] (\ `da80e7d <https://github.com/saltstack-formulas/stunnel-formula/commit/da80e7d2ba7b98ff07507ca479cc630edc18f694>`_\ )
+* **kitchen+ci:** update with latest CVE pre-salted images [skip ci] (\ `442960f <https://github.com/saltstack-formulas/stunnel-formula/commit/442960f91be543d8296ec83a5f7f5844846ddd99>`_\ )
+* **kitchen+gitlab:** update for new pre-salted images [skip ci] (\ `2cbf91c <https://github.com/saltstack-formulas/stunnel-formula/commit/2cbf91c8f7cb30619c6a737b8c2d7ad93ce85207>`_\ )
+* add Debian 11 Bullseye & update ``yamllint`` configuration [skip ci] (\ `dfcf18c <https://github.com/saltstack-formulas/stunnel-formula/commit/dfcf18c3374dfbb06f5e2f1ae96e97c869bfb72b>`_\ )
+* **kitchen+gitlab:** remove Ubuntu 16.04 & Fedora 32 (EOL) [skip ci] (\ `18143e0 <https://github.com/saltstack-formulas/stunnel-formula/commit/18143e0b04015a15c5580de2f9963299a64725d8>`_\ )
+* add ``arch-master`` to matrix and update ``.travis.yml`` [skip ci] (\ `34e170d <https://github.com/saltstack-formulas/stunnel-formula/commit/34e170dd11d335f5da09ffa35a2c0ca3dc381948>`_\ )
+* **kitchen+ci:** use latest pre-salted images (after CVE) [skip ci] (\ `0a740db <https://github.com/saltstack-formulas/stunnel-formula/commit/0a740db598c757551149aa42dc2bee9a02b1f149>`_\ )
+* **kitchen+gitlab:** adjust matrix to add ``3003`` [skip ci] (\ `6cb055e <https://github.com/saltstack-formulas/stunnel-formula/commit/6cb055ee58abe01ff04ad1af88a540302da27613>`_\ )
+* **kitchen+gitlab-ci:** use latest pre-salted images [skip ci] (\ `37149c9 <https://github.com/saltstack-formulas/stunnel-formula/commit/37149c9dbdffd9b9497657b552ace36e412bca74>`_\ )
+* **pre-commit:** update hook for ``rubocop`` [skip ci] (\ `a1a98ca <https://github.com/saltstack-formulas/stunnel-formula/commit/a1a98ca0e8e747d336347390c497c05dcde00a1a>`_\ )
+
+Features
+^^^^^^^^
+
+
+* **certs:** new option to disable automated certificate configuration (\ `d0058c2 <https://github.com/saltstack-formulas/stunnel-formula/commit/d0058c2cc52a97b99c844c80c8358fd74dec2e33>`_\ )
+
+Tests
+^^^^^
+
+
+* **system:** add ``build_platform_codename`` [skip ci] (\ `ea71069 <https://github.com/saltstack-formulas/stunnel-formula/commit/ea71069d84b78338a51d57531b665da016ee4f5a>`_\ )
+* **system.rb:** add support for ``mac_os_x`` [skip ci] (\ `08c4817 <https://github.com/saltstack-formulas/stunnel-formula/commit/08c4817caea49be1770f5128e5b1f9c7860a2456>`_\ )
+* standardise use of ``share`` suite & ``_mapdata`` state [skip ci] (\ `e50d418 <https://github.com/saltstack-formulas/stunnel-formula/commit/e50d41858562f8078eb8263d6b23edc2a47075b0>`_\ )
+
 `0.2.3 <https://github.com/saltstack-formulas/stunnel-formula/compare/v0.2.2...v0.2.3>`_ (2020-12-16)
 ---------------------------------------------------------------------------------------------------------
 
