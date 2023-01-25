@@ -6,11 +6,16 @@
 
 {%- macro service_segment(name) -%}
 {%  set service = service_defaults.copy() -%}
-{%  do service.update({
-      'CAfile': stunnel.conf_dir+'/tls/'+name+'.ca',
-      'cert': stunnel.conf_dir+'/tls/'+name+'.crt',
-      'key': stunnel.conf_dir+'/tls/'+name+'.key',
-}) -%}
+{%- if stunnel.certificates_auto_config -%}
+{%    do service.update({
+        'CAfile': stunnel.conf_dir+'/tls/'+name+'.ca',
+        'cert': stunnel.conf_dir+'/tls/'+name+'.crt',
+        'key': stunnel.conf_dir+'/tls/'+name+'.key',
+      }) -%}
+{%- else -%}
+{%-   do service.pop('verifyPeer') -%}
+{%-   do service.pop('verifyChain') -%}
+{%- endif -%}
 {%  do service.update(salt['pillar.get']('stunnel:config:services:'+name, {})) -%}
 [ {{ name }} ]
 {%  for key in service.keys() | sort -%}
