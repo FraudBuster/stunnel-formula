@@ -27,6 +27,9 @@ stunnel_package:
     - user: {{ stunnel.root_user }}
     - group: {{ stunnel.group }}
     - mode: 750
+{%- if stunnel.clean_services_dir %}
+    - clean: True
+{%- endif %}
 
 {{ stunnel.conf_dir }}/tls:
   file.directory:
