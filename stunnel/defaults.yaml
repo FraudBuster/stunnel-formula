@@ -9,3 +9,4 @@
 stunnel:
   root_user: root
   root_group: root
+  clean_services_dir: false

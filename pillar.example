@@ -14,6 +14,12 @@ stunnel:
     log_dir: /var/log/stunnel
     pid: /var/run/stunnel.pid
     debug: notice
+    # Setting this to true will make it so that everytime you run
+    # the formula, it will start by making sure that there is no
+    # residual configuration file. However, by doing so, you will
+    # also remove any manual configuration you set outside of using
+    # salt
+    clean_services_dir: false
     # Set certificates_auto_config to false if you do not want to use
     # the automated certificates configuration from this formula.
     # Also, this will unset verifyChain and verifyPeer.
